@@ -47,19 +47,35 @@ function generateRevenuePerProductData() {
 
 function generateSalesTrendData() {
   const salesData = [];
-  const startDate = new Date();
-  startDate.setDate(startDate.getDate() - 90);
-  for (
-    let date = startDate;
-    date <= new Date();
-    date.setDate(date.getDate() + 1)
-  ) {
+  const currentDate = new Date();
+
+  // Set the start date to one year ago from the current date
+  const startDate = new Date(
+    currentDate.getFullYear() - 1,
+    currentDate.getMonth(),
+    currentDate.getDate()
+  );
+
+  // Calculate the number of days between the start and end dates
+  const totalDays = Math.floor(
+    (currentDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
+  );
+
+  // Calculate the interval to get around 12 entries in total
+  const interval = Math.max(1, Math.floor(totalDays / 12));
+
+  // Generate data for each month within the year
+  for (let days = 0; days <= totalDays; days += interval) {
+    const date = new Date(startDate);
+    date.setDate(startDate.getDate() + days);
+
     const salesRevenue = faker.number.int({ min: 50000, max: 200000 });
     salesData.push({
-      date: new Date(date),
+      date: date.toISOString().split("T")[0],
       salesRevenue: salesRevenue,
     });
   }
+
   return salesData;
 }
 
