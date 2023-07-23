@@ -1,8 +1,8 @@
-import RevenuePerProductData from "../models/RevenuePerProductData.model";
-import SalesTrendData from "../models/SalesTrendData.model";
-import SalesByRegionData from "../models/SalesByRegionData.model";
-import SalesByCategoryData from "../models/SalesByCategoryData.model";
-import TopSellingProductsData from "../models/TopSellingProductsData.model";
+import RevenuePerProductData from "./models/RevenuePerProductData.model";
+import SalesTrendData from "./models/SalesTrendData.model";
+import SalesByRegionData from "./models/SalesByRegionData.model";
+import SalesByCategoryData from "./models/SalesByCategoryData.model";
+import TopSellingProductsData from "./models/TopSellingProductsData.model";
 
 const resolvers = {
   Query: {

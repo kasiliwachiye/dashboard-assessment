@@ -24,7 +24,7 @@ const RevenuePerProduct: React.FC = () => {
           tickFormat={(tick) => tick}
           style={{
             tickLabels: {
-              angle: -15,
+              angle: -30,
               textAnchor: "end",
               fontSize: 8,
               verticalAnchor: "middle",

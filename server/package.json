@@ -20,8 +20,8 @@
     "mongoose": "^7.4.0"
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.0.2",
+        "@faker-js/faker": "^8.0.2",
     "@types/node": "^20.4.4",
-    "typescript": "^5.1.6"
+        "typescript": "^5.1.6"
   }
 }

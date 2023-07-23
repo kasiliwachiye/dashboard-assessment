@@ -12,7 +12,10 @@ const SalesTrend: React.FC = () => {
   // Custom tick format function for the x-axis (date)
   const formatDateTick = (tick: string) => {
     const date = new Date(Number(tick));
-    const month = date.toLocaleString("default", { month: "long" });
+    const month = date.toLocaleString("default", {
+      month: "long",
+      year: "2-digit",
+    });
     return month;
   };
 
