@@ -6,12 +6,12 @@ Server Setup
 Change directory to the ‘server’ folder - cd server
 Run ‘npm install’ to install the dependencies
 Run ‘npm start’ to start up the server
-To run tests on the App.tsx file, run "npm run test"
 
 Client Setup
 Change directory to the client folder - cd client
 Run ‘npm install’ to install the dependencies
 Run ‘npm start’ to start up the react app
+To run tests on the App.tsx file, run "npm run test"
 
 Note
 You will notice that the server.js file in the server directory has some code commented out. These are functions meant to add data to the Mongodb database.
