@@ -9,7 +9,12 @@ const SalesTrend: React.FC = () => {
     (state: SalesState) => state.salesTrendData
   );
 
-  console.log("sales trend data", salesTrendData);
+  // Custom tick format function for the x-axis (date)
+  const formatDateTick = (tick: string) => {
+    const date = new Date(Number(tick));
+    const month = date.toLocaleString("default", { month: "long" });
+    return month;
+  };
 
   return (
     <div>
@@ -23,7 +28,7 @@ const SalesTrend: React.FC = () => {
         width={window.innerWidth / 1.25}
       >
         <VictoryAxis
-          tickFormat={(tick) => tick}
+          tickFormat={formatDateTick} // Use the custom tick format function
           style={{
             tickLabels: {
               angle: -25,
